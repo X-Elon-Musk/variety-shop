@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>2017年度中国游戏产业研究用户调查问卷</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/blue.css">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <style type="text/css">
+        input::-webkit-input-placeholder{
+            color: rgba(106, 121, 137, 0.6)!important;
+        }
+        　　input:-moz-placeholder{
+            color: rgba(106, 121, 137, 0.6)!important;
+        }
+        　　input::-moz-placeholder{
+            color: rgba(106, 121, 137, 0.6)!important;
+        }
+        　　input:-ms-input-placeholder{
+            color: rgba(106, 121, 137, 0.6)!important;
+        }
+        .iradio_minimal-blue{
+            margin-left: 0.3em;
+            margin-right: 0.5em;
+        }
+        input[name="gender"]{
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <form method="post" action="" id="step2_form">
+        <h4>填写个人信息</h4>
+        <div class="q-choice-piccheck">
+            <div class="pull-left first_column"><span class="star">*</span>姓名：</div>
+            <div class="pull-left focus-border-con">
+                <input name="name" type="text" placeholder="请输入2-6位的中文姓名"/>
+                    <span class="focus-border">
+		            	<i></i>
+		            </span>
+            </div>
+        </div>
+        <div class="q-choice-piccheck">
+            <div class="pull-left first_column"><span class="star">*</span>性别：</div>
+            <div class="pull-left width-220">
+                男<input name="gender" type="radio" value="1" class="input "/>
+                女<input name="gender" type="radio" value="2"/>
+            </div>
+        </div>
+        <div class="q-choice-piccheck">
+            <div class="pull-left first_column"><span class="star">*</span>年龄：</div>
+            <div class="pull-left focus-border-con">
+                <input name="age" type="text" placeholder="请输入6-70之间的年龄"/>
+                    <span class="focus-border">
+		            	<i></i>
+		            </span>
+            </div>
+        </div>
+        <div class="q-choice-piccheck">
+            <div class="pull-left first_column"><span class="star">*</span>学历：</div>
+            <div class="pull-left">
+                <select name="education_level">
+                    <option value="1">初中及以下</option><option value="2">高中/中专</option><option value="3">本科/大专</option><option value="4">硕士及以上</option>
+                </select>
+            </div>
+        </div>
+        <div class="q-choice-piccheck">
+            <div class="pull-left first_column"><span class="star">*</span>职位：</div>
+            <div class="pull-left focus-border-con">
+                <select name="job">
+                    <option value="1">在校大学生</option><option value="2">基层员工</option><option value="3">企业管理层</option><option value="4">自由职业者</option><option value="5">其他</option>
+                </select>
+            </div>
+        </div>
+        <!--<div class="q-choice-piccheck">
+            <div class="pull-left first_column"><span class="star">*</span>请问您的出生年份是:</div>
+            <div class="pull-left">
+                    <select name="birth_year">
+                        <option value="2010">2010年</option><option value="2009">2009年</option><option value="2008">2008年</option><option value="2007">2007年</option><option value="2006">2006年</option><option value="2005">2005年</option><option value="2004">2004年</option><option value="2003">2003年</option><option value="2002">2002年</option><option value="2001">2001年</option><option value="2000">2000年</option><option value="1999">1999年</option><option value="1998">1998年</option><option value="1997">1997年</option><option value="1996">1996年</option><option value="1995">1995年</option><option value="1994">1994年</option><option value="1993">1993年</option><option value="1992">1992年</option><option value="1991">1991年</option><option value="1990">1990年</option><option value="1989">1989年</option><option value="1988">1988年</option><option value="1987">1987年</option><option value="1986">1986年</option><option value="1985">1985年</option><option value="1984">1984年</option><option value="1983">1983年</option><option value="1982">1982年</option><option value="1981">1981年</option><option value="1980">1980年</option><option value="1979">1979年</option><option value="1978">1978年</option><option value="1977">1977年</option><option value="1976">1976年</option><option value="1975">1975年</option><option value="1974">1974年</option><option value="1973">1973年</option><option value="1972">1972年</option><option value="1971">1971年</option><option value="1970">1970年</option><option value="1969">1969年</option><option value="1968">1968年</option><option value="1967">1967年</option><option value="1966">1966年</option><option value="1965">1965年</option><option value="1964">1964年</option><option value="1963">1963年</option><option value="1962">1962年</option><option value="1961">1961年</option><option value="1960">1960年</option><option value="1959">1959年</option><option value="1958">1958年</option><option value="1957">1957年</option><option value="1956">1956年</option><option value="1955">1955年</option><option value="1954">1954年</option><option value="1953">1953年</option><option value="1952">1952年</option><option value="1951">1951年</option><option value="1950">1950年</option><option value="1949">1949年</option><option value="1948">1948年</option><option value="1947">1947年</option><option value="1946">1946年</option><option value="1945">1945年</option><option value="1944">1944年</option><option value="1943">1943年</option><option value="1942">1942年</option><option value="1941">1941年</option><option value="1940">1940年</option><option value="1939">1939年</option><option value="1938">1938年</option><option value="1937">1937年</option><option value="1936">1936年</option><option value="1935">1935年</option><option value="1934">1934年</option><option value="1933">1933年</option><option value="1932">1932年</option><option value="1931">1931年</option><option value="1930">1930年</option><option value="1929">1929年</option><option value="1928">1928年</option><option value="1927">1927年</option><option value="1926">1926年</option><option value="1925">1925年</option><option value="1924">1924年</option><option value="1923">1923年</option><option value="1922">1922年</option><option value="1921">1921年</option><option value="1920">1920年</option><option value="1919">1919年</option><option value="1918">1918年</option><option value="1917">1917年</option><option value="1916">1916年</option><option value="1915">1915年</option><option value="1914">1914年</option><option value="1913">1913年</option><option value="1912">1912年</option><option value="1911">1911年</option><option value="1910">1910年</option><option value="1909">1909年</option><option value="1908">1908年</option><option value="1907">1907年</option><option value="1906">1906年</option><option value="1905">1905年</option><option value="1904">1904年</option><option value="1903">1903年</option><option value="1902">1902年</option><option value="1901">1901年</option><option value="1900">1900年</option>				</select>
+
+            </div>
+        </div>
+        <div class="q-choice-piccheck">
+            <div class="pull-left first_column"><span class="star">*</span>您所在的地区:</div>
+            <div class="pull-left">
+                    <select name="location">
+                        <option value="1">安徽省</option><option value="2">澳门</option><option value="3">北京市</option><option value="4">重庆市</option><option value="5">福建省</option><option value="6">甘肃省</option><option value="7">广东省</option><option value="8">广西</option><option value="9">贵州省</option><option value="10">海南省</option><option value="11">河北省</option><option value="12">黑龙江省</option><option value="13">河南省</option><option value="14">湖北省</option><option value="15">湖南省</option><option value="16">江苏省</option><option value="17">江西省</option><option value="18">吉林省</option><option value="19">辽宁省</option><option value="20">内蒙古</option><option value="21">宁夏</option><option value="22">青海省</option><option value="23">陕西省</option><option value="24">山东省</option><option value="25">上海市</option><option value="26">山西省</option><option value="27">四川省</option><option value="28">台湾省</option><option value="29">天津市</option><option value="30">香港</option><option value="31">新疆</option><option value="32">西藏</option><option value="33">云南省</option><option value="34">浙江省</option><option value="35">其他地区</option>				</select>
+            </div>
+        </div>-->
+
+
+        <div class="q-choice-piccheck">
+            <div class="pull-left first_column"><span class="star">*</span>月收入：</div>
+            <div class="pull-left">
+                <select name="income">
+                    <option value="1">2000元以下</option><option value="2">2000-4000元</option><option value="3">4000-6000元</option><option value="4">6000-8000元</option><option value="5">8000元以上</option><option value="6">无收入</option>
+                </select>
+            </div>
+        </div>
+        <div class="q-choice-piccheck">
+            <div class="pull-left first_column"><span class="star">*</span>您所在的地区:</div>
+            <div class="pull-left">
+                <select name="location">
+                    <option value="1">北京市</option>
+                    <option value="2">天津市</option>
+                    <option value="3">上海市</option>
+                    <option value="4">重庆市</option>
+                    <option value="5">河北省</option>
+                    <option value="6">山西省</option>
+                    <option value="7">辽宁省</option>
+                    <option value="8">吉林省</option>
+                    <option value="9">黑龙江省</option>
+                    <option value="10">江苏省</option>
+                    <option value="11">浙江省</option>
+                    <option value="12">安徽省</option>
+                    <option value="13">福建省</option>
+                    <option value="14">台湾省</option>
+                    <option value="15">江西省</option>
+                    <option value="16">山东省</option>
+                    <option value="17">河南省</option>
+                    <option value="18">湖北省</option>
+                    <option value="19">湖南省</option>
+                    <option value="20">广东省</option>
+                    <option value="21">海南省</option>
+                    <option value="22">四川省</option>
+                    <option value="23">贵州省</option>
+                    <option value="24">云南省</option>
+                    <option value="25">陕西省</option>
+                    <option value="26">甘肃省</option>
+                    <option value="27">青海省</option>
+                    <option value="28">内蒙古自治区</option>
+                    <option value="29">广西壮族自治区</option>
+                    <option value="30">西藏自治区</option>
+                    <option value="31">宁夏回族自治区</option>
+                    <option value="32">新疆维吾尔自治区</option>
+                    <option value="33">香港特别行政区</option>
+                    <option value="34">澳门特别行政区</option>
+                </select>
+            </div>
+        </div>
+        <div class="q-choice-piccheck">
+            <div class="pull-left first_column"><span class="star">*</span>有效E-mail：</div>
+            <div class="pull-left focus-border-con">
+                <input name="email" type="text" placeholder="请输入合法邮箱地址"/>
+                    <span class="focus-border">
+		            	<i></i>
+		            </span>
+            </div>
+        </div>
+        <div class="q-choice-piccheck">
+            <div class="pull-left first_column"><span class="star">*</span>身份证号码（可以填监护人身份证号）:</div>
+            <div class="pull-left focus-border-con">
+                <input name="idcard" type="text" placeholder="请输入合法身份证信息"/>
+                    <span class="focus-border">
+		            	<i></i>
+		            </span>
+            </div>
+        </div>
+        <div class="q-choice-piccheck">
+            <div class="pull-left first_column"><span class="star">*</span>联系电话：</div>
+            <div class="pull-left focus-border-con">
+                <input name="phone" type="text" placeholder="请输入手机号或者包含区号的电话号码"/>
+                    <span class="focus-border">
+		            	<i></i>
+		            </span>
+            </div>
+				<span style="line-height: 32px;">
+					例如：<font color="red">010 88888888</font>
+				</span>
+        </div>
+
+        <div class="q-choice-piccheck">
+            <div class="pull-left first_column"><span class="star">*</span>验证码：</div>
+            <div class="pull-left focus-border-con">
+                <input name="kcaptcha" type="text"/>
+                    <span class="focus-border">
+		            	<i></i>
+		            </span>
+            </div>
+            <img id="vcodeimg">
+        </div>
+        <div style="text-align: center; margin-top:60px;">
+            <input name="submit" type="button" value="提交" class="btn btn-info btn-200" id="btnSubmit"/>
+        </div>
+    </form>
+
+</div>
+<script type="text/javascript" src="./js/jquery.js"></script>
+<script type="text/javascript" src="./js/icheck.min.js"></script>
+<script type="text/javascript">
+    /*$('input[name="name"]').attr("value",'中国');
+     $('input[name="age"]').attr("value",'20');
+     $('input[name="email"]').attr("value",'1@162.com');
+     $('input[name="idcard"]').attr("value",'410183198909136211');
+     $('input[name="phone"]').attr("value",'15538254334');*/
+</script>
+<script type="text/javascript">
+    $(function(){
+        var baseUrl = "http://192.168.60.18/rank/api/question/";
+        $.get(baseUrl + "checkIp", {}, function(data){
+            if(data.code == "success"){
+//				console.log(data.data);
+                if(data.data.valid == 1){
+                    $("#step2_form").show();
+                    $("#info").hide();
+                    $("#vcodeimg").click(function(){
+                        $("#vcodeimg").attr("src", baseUrl + "validateCode?sn=" + Math.random());
+                    });
+                    $("#vcodeimg").click();
+                    $("#btnSubmit").click(function(){
+                        check_form();
+                    });
+                }else{
+                    $("#step2_form").hide();
+                    $("#info").show();
+                }
+            }else{
+                alert(data.msg);
+            }
+        },"jsonp");
+
+        function check_form()
+        {
+            /*验证名字*/
+            if($("[name='name']").val())
+            {
+                var re = /^[\u4e00-\u9fa5]{2,6}$/;
+                if(!re.test($("[name='name']").val()))
+                {
+                    alert("请输入2-6位的中文姓名!");
+                    $("[name='name']").focus();
+                    return false;
+                }
+
+            }else{
+                alert("请输入2-6位中文姓名");
+                $("[name='name']").focus();
+                return false;
+            }
+            /*验证性别*/
+            if(!$("[name='gender']:checked").val())
+            {
+                alert("请选择性别!");
+                return false;
+            }
+            /*验证年龄*/
+            if($("[name='age']").val())
+            {
+                var re = /^\+?[1-9][0-9]*$/;
+                if(!re.test($("[name='age']").val()))
+                {
+                    alert("请输入6-70之间的年龄!");
+                    $("[name='age']").focus();
+                    return false;
+                }
+                if(parseInt($("[name='age']").val())<6||parseInt($("[name='age']").val())>70)
+                {
+                    alert("请输入6-70之间的年龄!");
+                    $("[name='age']").focus();
+                    return false;
+                }
+
+            }else{
+                alert("请输入6-70之间的年龄!");
+                $("[name='age']").focus();
+                return false;
+            }
+            if($("[name='email']").val())
+            {	var re = /\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/;
+                //var re = /^([a-za-z0-9]+[_|_|.]?)*[a-za-z0-9]+@([a-za-z0-9]+[_|_|.]?)*[a-za-z0-9]+.[a-za-z]{2,3}$/;
+                //var re = /^\w{1,}@\w{1,}\.\w{2,3}$/;
+                if(!re.test($("[name='email']").val()))
+                {
+                    alert("请输入合法邮箱地址!");
+                    $("[name='email']").focus();
+                    return false;
+                }
+            }else{
+                alert("请输入合法邮箱地址!");
+                $("[name='email']").focus();
+                return false;
+            }
+            if($("[name='idcard']").val())
+            {
+                var idcard = $("[name='idcard']").val();
+                var re = /^\d{17}[a-zA-Z0-9]$/;
+                var y = idcard.substr(6,4);
+                var m = idcard.substr(10,2);
+                var d = idcard.substr(12,2);
+                var ymd = y>1900&&y<2010&&m>0&&m<13&&d>0&&d<32;
+                if(!re.test(idcard)||!ymd)
+                {
+                    alert("请输入合法身份证信息!");
+                    $("[name='idcard']").focus();
+                    return false;
+                }
+            }else{
+                alert("请输入合法身份证信息!");
+                $("[name='idcard']").focus();
+                return false;
+            }
+            if($("[name='phone']").val())
+            {
+                var phone = $("[name='phone']").val();
+                var re = /^(1\d{10})|(\d{3,4}\s\d{6,8})$/;
+                if(!re.test(phone))
+                {
+                    alert("请输入合法联系方式(手机号或者包含区号的电话号码,如:010 88888888/138****1234)!");
+                    $("[name='phone']").focus();
+                    return false;
+                }
+            }else{
+                alert("请输入合法联系方式(手机号或者包含区号的电话号码,如:010 88888888/138****1234)!");
+                $("[name='phone']").focus();
+                return false;
+            }
+
+            //ajax 提交
+            $.ajax({
+                type: "POST",
+                url: baseUrl + "saveUserBaseInfo",
+                dataType: "jsonp",
+                data:$('#step2_form').serialize(),
+                success: function(data){
+                    if(data.code == "success"){
+                        if(data.data.valid == 1) {
+                            window.location.href="/";
+                        } else {
+                            $("#vcodeimg").attr("src", baseUrl + "validateCode?sn=" + Math.random());
+                            alert(data.msg);
+                        }
+                    }
+                    return false;
+                }
+            });
+        }
+
+        $('input').iCheck({
+            radioClass: 'iradio_minimal-blue',
+            checkboxClass: 'icheckbox_minimal-blue',
+            //increaseArea: '20%' // optional
+        });
+    });
+</script>
+<div style="display:none;">
+    <script type="text/javascript">
+        var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1256421492'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1256421492' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+</div>
+</body>
+
+</html>

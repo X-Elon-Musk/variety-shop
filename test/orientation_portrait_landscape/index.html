@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+        body{
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background-repeat:no-repeat;
+            background-size:100% 100%;
+            background-image:url('./image/0.jpg');
+        }
+        /* portrait 竖屏*/
+        @media screen and (orientation:portrait) {
+            /* portrait-specific styles */
+            body{
+                background-image:url('./image/0.jpg');
+            }
+        }
+        /* landscape 横屏*/
+        @media screen and (orientation:landscape) {
+            /* landscape-specific styles */
+            body{
+                background-image:url('./image/1.jpg');
+            }
+        }
+    </style>
+
+</head>
+<body>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+    var winWid=$(window).width();
+    document.body.style.width=winWid+'px';
+    var winHei=$(window).height();
+    document.body.style.height=winHei+'px';
+    //在窗口或框架被调整大小时重新赋值body宽高
+    window.onresize=function () {
+        winWid=$(window).width();
+        document.body.style.width=winWid+'px';
+        winHei=$(window).height();
+        document.body.style.height=winHei+'px';
+    }
+    /*
+     window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", function() {
+        switch(window.orientation){
+            case 0:
+            case 180:
+//                alert("竖屏");
+//                document.body.style.background='red';
+                break;
+            case 90:
+            case -90:
+//                alert("横屏");
+//                document.body.style.background='blue';
+                break;
+        }
+     }, false);*/
+
+</script>
+</body>
+</html>

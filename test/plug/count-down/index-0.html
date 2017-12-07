@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<ul data-deadline="2017/07/13 00:00:00">
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+<script src="./count-down-0.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	var list=document.querySelectorAll("ul li");
+    var deadline=document.querySelector("ul").dataset.deadline;
+    countDown(deadline,list);
+</script>
+</body>
+</html>

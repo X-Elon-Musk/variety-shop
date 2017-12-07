@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div class="canvas" style="width: 800px; height:800px; margin: 0px auto">
+    <canvas id="myChart"></canvas>
+</div>
+<script src="js/Chart.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/jquery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+    var randomColorFactor = function() {
+        return Math.round(Math.random() * 255);
+    };
+    var randomColor = function(opacity) {
+        return 'rgba(' + randomColorFactor() + ',' + randomColorFactor() + ',' + randomColorFactor() + ',' + (opacity || '.3') + ')';
+    };
+    refreshChart();
+    function refreshChart(){
+        var xLabels_ = ["2017-07-13", "2017-07-14", "2017-07-15", "2017-07-16", "2017-07-17", "2017-07-18", "2017-07-19"];
+        var data_ =  ["0", "20", "10", "10", "0", "20", "10"];
+        Chart.defaults.global.defaultFontFamily = 'Microsoft Yahei';
+        Chart.defaults.global.tooltips.callbacks.beforeTitle = function(tooltipItems){
+            var tooltipItem = tooltipItems[0];
+            tooltipItem.yLabel = data_[tooltipItem.index];
+        }
+        var config = {
+            type: 'line',
+            data: {
+                xLabels: xLabels_,
+                yLabels: ['50', '40', '30', '20', '10', '0'],
+                datasets: [{
+                    label: "一周热度变化",
+                    data: data_,
+                    fill: true,
+                    showLine:true,
+                    borderDash: [7, 7]
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    xAxes: [{
+                        scaleLabel: {
+                            show: true,
+                            labelString: 'Month'
+                        }
+                    }],
+                    yAxes: [{
+                        type: 'category',
+                        position: 'left',
+                        display: true,
+                        scaleLabel: {
+                            show: true,
+                            display: true,
+                            labelString: '热度'
+                        },
+                        ticks: {
+                            beginAtZero:true
+                        }
+                    }]
+                }
+            }
+        };
+
+        $.each(config.data.datasets, function(i, dataset) {
+            dataset.borderColor = randomColor(0.4);
+            dataset.backgroundColor = randomColor(0.5);
+            dataset.pointBorderColor = randomColor(0.7);
+            dataset.pointBackgroundColor = randomColor(0.5);
+            dataset.pointBorderWidth = 1;
+        });
+        $(document).ready(function(){
+            var ctx = document.getElementById("myChart").getContext("2d");
+            window.myLine = new Chart(ctx, config);
+        });
+    }
+</script>
+</body>
+</html>

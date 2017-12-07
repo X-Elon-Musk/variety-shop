@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css"/>
+    <style type="text/css">
+        body{
+            margin: 0px;
+            padding: 100px;
+        }
+        li{
+            margin-right: 1em;
+        }
+        .container{
+            font-weight: bolder;
+            font-size: 50px;
+            line-height: 100px;
+        }
+    </style>
+</head>
+<body>
+<div class="container"></div>
+<ul class="page"></ul>
+<script src="./js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="./js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+    /*存放页面数组*/
+    var pageList=[];
+    /*最大页码*/
+    var size=20;
+    /*初始页码*/
+    var page=1;
+    var parentDom=document.querySelector('.page');
+    pageShow(pageList, size, page,parentDom);
+    /*页码显示*/
+    function pageShow(pageList, size, page,parentDom) {
+        getPageList(pageList, size, page,parentDom,function () {
+            $('.page li').click(function () {
+                var page=$(this).attr('data-id');
+                pageShow(pageList, size, page,parentDom);
+            });
+        });
+    }
+    /*添加页面按钮*/
+    function appendChild(arr,parent,page,callback) {
+        console.log(page);
+        parent.innerHTML='';
+        for (var i = 0; i < arr.length; i++) {
+            var child=document.createElement('li');
+            if (parseInt(page)==arr[i]) {
+                child.className="btn btn-default btn-success";
+            } else{
+                child.className="btn btn-default";
+            }
+            child.dataset.id=arr[i];
+            child.innerHTML=arr[i];
+            parent.appendChild(child);
+        }
+        $('.container').html(parseInt(page));
+        callback&&callback();
+    }
+    /*页码处理*/
+    function getPageList(pageList, size, page,parentDom,callback) {
+        pageList=[];
+        page=parseInt(page);
+        var firstPage = 1;
+        var maxPage = 9;
+        if (size > maxPage && page > 3) {
+            firstPage = page - 3;
+            if(firstPage > 1){
+                pageList.push(1);
+            }
+        }
+        var lastPage = size;
+        if (size > maxPage && page + 3 < size) {
+            lastPage = page + 3;
+        }
+        for (var i = firstPage; i <= lastPage; i++) {
+            pageList.push(i);
+        }
+        if (size > maxPage && page + 3 < size) {
+            pageList.push(size);
+        }
+        appendChild(pageList,parentDom,page,callback);
+    }
+</script>
+</body>
+</html>

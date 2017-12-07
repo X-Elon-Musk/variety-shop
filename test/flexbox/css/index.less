@@ -1,0 +1,372 @@
+  /*清默认样式*/
+body{
+    margin: 0px;
+}
+ul{
+    margin: 0px;
+    padding: 0px;
+}
+li{
+    list-style: none;
+}
+p{
+    height: 30px;
+    width: 500px;
+    margin: 20px auto;
+    text-align: center;
+    font: bold 20px/30px "微软雅黑";
+    background: palegreen;
+}
+.displayFlex(){
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -o-box;
+    display: box;
+    display: -webkit-flex;
+    display: flex;
+}
+.alignItems(){
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+/*
+兼容性问题：
+    将display: flex;替换成.displayFlex()；
+    将align-items: center;替换成.alignItems()；
+*/
+
+
+
+#box0{
+    margin: 20px auto;
+    width: 500px;
+    height: 200px;
+    background: rgba(52,95,189,1);
+    /*弹性盒模型*/
+    .displayFlex();
+    /*设置主轴方向,默认为row(水平方向);column(竖直方向)*/
+    flex-direction: row;
+    /*主轴对齐方式*/
+    justify-content: center;
+    /*交叉轴对齐方式*/
+    .alignItems();
+}
+#box0 li{
+    background: pink;
+    height: 100px;
+    width: 20%;
+}
+#box1{
+    margin: 20px auto;
+    width: 500px;
+    height: 200px;
+    background: rgba(52,95,189,1);
+    /*弹性盒模型*/
+    display: flex;
+    /*设置主轴方向,默认为row(水平方向);column(竖直方向)*/
+    flex-direction: row;
+    /*主轴对齐方式*/
+    justify-content: space-around;
+    /*交叉轴对齐方式*/
+    align-items: center;
+}
+#box1 li{
+    background: pink;
+    height: 100px;
+    width: 20%;
+}
+#box2{
+    margin: 20px auto;
+    width: 500px;
+    height: 200px;
+    background: rgba(52,95,189,1);
+    /*弹性盒模型*/
+    display: flex;
+    /*设置主轴方向,默认为row(水平方向);column(竖直方向)*/
+    flex-direction: row;
+    /*主轴对齐方式*/
+    justify-content: space-between;
+    /*交叉轴对齐方式*/
+    align-items: center;
+}
+#box2 li{
+    background: pink;
+    height: 100px;
+    width: 20%;
+}
+  /*多余的1px无法分配留在最后*/
+#box2 li:nth-of-type(4){
+    margin-left: 1px;
+}
+#box3{
+    margin: 20px auto;
+    width: 500px;
+    height: 200px;
+    background: rgba(52,95,189,1);
+    /*弹性盒模型*/
+    display: flex;
+    /*设置主轴方向,默认为row(水平方向);column(竖直方向)*/
+    flex-direction: column;
+    /*主轴对齐方式*/
+    justify-content: space-around;
+    /*交叉轴对齐方式*/
+    align-items: center;
+}
+#box3 li{
+    background: pink;
+    height: 15%;
+    width: 400px;
+}
+#box4{
+    margin: 20px auto;
+    width: 500px;
+    height: 200px;
+    background: rgba(52,95,189,1);
+    /*弹性盒模型*/
+    display: flex;
+    /*设置主轴方向,默认为row(水平方向);column(竖直方向)*/
+    flex-direction: column;
+    /*主轴对齐方式*/
+    justify-content: space-between;
+    /*交叉轴对齐方式*/
+    align-items: center;
+}
+#box4 li{
+    background: pink;
+    height: 15%;
+    width: 400px;
+}
+#box5{
+    margin: 20px auto;
+    width: 500px;
+    height: 600px;
+    background: rgba(52,95,189,1);
+    /*弹性盒模型*/
+    display: flex;
+    /*设置主轴方向,默认为row(水平方向);column(竖直方向)*/
+    /*  flex-direction: row;*/
+    /*主轴对齐方式*/
+    justify-content: space-around;
+    /*交叉轴对齐方式*/
+    align-items: center;
+    /*换行*/
+    flex-flow: row wrap;
+}
+#box5 li{
+    background: pink;
+    height: 130px;
+    width: 210px;
+}
+#box6{
+    margin: 20px auto;
+    width: 500px;
+    height: 600px;
+    background: rgba(52,95,189,1);
+    /*弹性盒模型*/
+    display: flex;
+    /*设置主轴方向,默认为row(水平方向);column(竖直方向)*/
+    /*  flex-direction: row;*/
+    /*主轴对齐方式*/
+    justify-content: space-around;
+    /*交叉轴对齐方式*/
+    align-items: center;
+    /*换行*/
+    flex-flow: row wrap;
+}
+#box6 li{
+    background: pink;
+    height: 130px;
+    width: 210px;
+}
+#box6 li:nth-of-type(1),#box6 li:nth-of-type(2){
+    height: 230px;
+}
+#box7{
+    margin: 20px auto;
+    width: 500px;
+    height: 600px;
+    background: rgba(52,95,189,1);
+    /*弹性盒模型*/
+    display: flex;
+    /*设置主轴方向,默认为row(水平方向);column(竖直方向)*/
+    /*  flex-direction: row;*/
+    /*主轴对齐方式*/
+    justify-content: space-around;
+    /*交叉轴对齐方式*/
+    align-items: center;
+    /*换行*/
+    flex-flow: row wrap;
+}
+#box7 li{
+    background: pink;
+    height: 130px;
+    width: 210px;
+}
+#box7 li:nth-of-type(3),#box7 li:nth-of-type(4){
+    height: 230px;
+}
+#box8{
+    margin: 20px auto;
+    width: 500px;
+    height: 200px;
+    background: rgba(52,95,189,1);
+    /*弹性盒模型*/
+    display: flex;
+    /*设置主轴方向,默认为row(水平方向);column(竖直方向)*/
+    /*  flex-direction: row;*/
+    /*主轴对齐方式*/
+    /*  justify-content: space-between;*/
+    /*交叉轴对齐方式*/
+    align-items: center;
+    /*换行*/
+    flex-flow: row wrap;
+}
+#box8 li{
+    height: 100px;
+}
+#box8 li:nth-of-type(1){
+    flex: 1;
+    background: pink;
+}
+#box8 li:nth-of-type(2){
+    flex: 2;
+    margin: 0px 20px;
+    background: palevioletred;
+}
+#box8 li:nth-of-type(3){
+    flex: 3;
+    background: peru;
+}
+#box9{
+    margin: 20px auto;
+    width: 500px;
+    height: 200px;
+    background: rgba(52,95,189,1);
+    /*弹性盒模型，盒模型的另一种写法*/
+    display: -webkit-box;
+    /*设置主轴方向,默认为row(水平方向);column(竖直方向)*/
+    /*  flex-direction: row;*/
+    /*交叉轴对齐方式*/
+    -webkit-box-align:center;
+    /*换行*/
+    flex-flow: row wrap;
+}
+#box9 li{
+    height: 100px;
+}
+#box9 li:nth-of-type(1){
+    -webkit-box-flex: 1;
+    background: pink;
+}
+#box9 li:nth-of-type(2){
+    margin: 0px 20px;
+    -webkit-box-flex: 2;
+    background: palevioletred;
+}
+#box9 li:nth-of-type(3){
+    -webkit-box-flex: 3;
+    background: peru;
+    position: relative;
+}
+#box9 li:nth-of-type(3) div{
+    position: absolute;
+    left: 20px;
+    top: 30px;
+    height: 30px;
+    width: 100px;
+    background: black;
+    color: #fff;
+    text-align: center;
+    font: bold 20px/30px "微软雅黑";
+}
+#box10{
+    margin: 20px auto;
+    width: 500px;
+    height: 200px;
+    background: rgba(52,95,189,1);
+    /*弹性盒模型*/
+    display: flex;
+    /*设置主轴方向,默认为row(水平方向);column(竖直方向)*/
+    flex-direction: row;
+    /*主轴对齐方式*/
+    justify-content: space-between;
+    /*交叉轴对齐方式*/
+    align-items: center;
+}
+#box10 span{
+    background: pink;
+    height: 100px;
+    width: 20%;
+}
+  /*盒模型中为内嵌元素的子级元素支持上下  margin*/
+#box10 span:nth-of-type(1){
+    margin-top: -80px;
+}
+#box10 span:nth-of-type(3){
+    margin-bottom: -80px;
+}
+  /*
+    盒模型样式添加到父级元素
+
+    盒模型的子元素特性：
+        1、块元素在一行显示
+         2、内嵌元素可以支持宽高
+         3、内嵌元素支持上下  margin,上下  margin是指与没加  margin值之前位置的偏移值
+         4、元素可以为定位父级
+
+*/
+  /*
+    盒模型的另一种写法
+        1）
+          display: -webkit-box;
+          display: -moz-box;
+          display: -ms-flexbox;
+          display: -o-box;
+          display: box;
+
+        这是老版本的写法，09年之前的
+        2）弹性伸缩盒的属性
+            1、box-orient属性
+                box-orient主要实现盒子内部元素的流动方向。我们看看他们的属性值如下：
+                A、box-orient:horizontal;伸缩项目从左到右水平排列。默认值
+                B、box-orient:vertical;伸缩项目从上到下垂直排列。
+                C、box-orient:inline-axis;伸缩项目沿着内联轴排列显示。
+                D、box-orient:block-axis;伸缩项目沿着块轴排列显示。
+                一般我们就默认就行了。
+            2、box-direction属性
+                主要是设置伸缩容器中元素的流动顺序。
+                属性值：
+                box-direction:normal;默认值，正常顺序。
+                box-direction:reverse;逆向排列，也就是倒着排列的意思。
+            3、box-pack属性
+                用于伸缩项目的分布方式。
+                它的属性值如下：
+                box-pack:start;伸缩项目以起始点靠齐。
+                box-pack:end;伸缩项目以结束点靠齐。
+                box-pack:center;伸缩项目以中心点靠齐。
+                box-pack:justify;伸缩项目平均分布，也就是两边排列的意思。-webkit-支持，-moz-不支持。
+                不过你如果不给父元素div添加宽度为100%的话，是显示不出效果来的，因为div添加了  display：box;属性后，这个div就不是普通盒子了，而是伸缩性盒子了，随里面内容伸缩。所以我们必须给他强制添加一个宽度，这样设置了box-pack排列属性才会有效果。比如：
+                div{
+                  width:100%
+                -webkit-box-pack:end;
+                }
+                这样才会有效果的，也就是从结尾即从右侧向左侧排列的了。如果我们设置成center就变成居中了。
+            4、box-align属性
+                用来处理伸缩容器的额外空间。
+                有五个属性值：
+                box-align:start;伸缩项目以顶部为基准，清理下部分额外空间。
+                box-align:end;伸缩项目以底部为基准，清理上部分额外空间。
+                box-align:center;伸缩项目以中部为基准，平均清理上下部额外空间；
+                box-align:baseline;伸缩项目以基线为基准，清理额外的空间；
+                box-align:stretch;伸缩项目填充整个容器，是默认值。
+
+                例如：
+                div{
+                -webkit-box-align:center;
+                }
+                就是垂直居中对齐的意思，而清理上下额外空间就是p模块容器里的内容正好填满，不显示多余的空间。
+
+*/

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        .button{
+            width: 200px;
+            height: 50px;
+            border: 1px solid #000000;
+            text-align: center;
+            line-height: 50px;
+        }        
+    </style>
+</head>
+<body>
+<div class="button">点击弹出遮罩层</div>
+<script src="../mask-1.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+    MaskShare(".button",{
+        imgSrc:"./loader.gif",
+        boxDomStyle:{
+            opacity:".9"
+        },
+        imgDomStyle:{
+            opacity:".8"
+        },
+        open:function(){
+            console.log("show");
+        },
+        close:function(){
+            console.log("close");
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="reset.css"/>
+    <link rel="stylesheet" type="text/css" href="count_down.css"/>
+</head>
+<body>
+<div class="count_down">
+    <p>距离大会开幕</p>
+    <ul class="count_down_time" data-deadline="2017/06/03 00:00:00">
+        <li>
+            <strong>30</strong>
+            <span>天</span>
+        </li>
+        <li>
+            <strong>00</strong>
+            <span>时</span>
+        </li>
+        <li>
+            <strong>00</strong>
+            <span>秒</span>
+        </li>
+    </ul>
+</div>
+<script src="../count-down-0.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+    var list=document.querySelectorAll("ul li strong");
+    var deadline=document.querySelector("ul").dataset.deadline;
+    countDown(deadline,list);
+</script>
+</body>
+</html>

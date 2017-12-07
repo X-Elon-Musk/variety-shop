@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        .test{
+            height: 50px;
+            width: 200px;
+            background: #dddddd;
+            color: #000000;
+            font-size: 20px;
+            line-height: 50px;
+            text-align: center;
+            margin: 200px auto;
+            cursor: pointer;
+        }
+        .prompt{
+            position: absolute;
+            padding: 10px;
+            background: #0063a4;
+            font-size: 16px;
+            line-height: 20px;
+            display: none;
+            color: #FFFFFF;
+        }
+    </style>
+</head>
+<body>
+<div class="test">鼠标移入此处</div>
+<span class="prompt"></span>
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript">
+    $.fn.extend({
+        tooltip: function (text) {
+            var _this=this;
+            $('.prompt').html(text);
+            $(this).mouseenter(function (ev){
+                $('.prompt').show().css({
+                    left: ev.clientX+'px',
+                    top:ev.clientY+'px'
+                })
+            }).mouseleave(function (){
+                $('.prompt').hide();
+            });
+        }
+    });
+    $('.test').tooltip('提示内容');
+</script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        body{
+            height: 5000px;
+        }
+    </style>
+</head>
+<body>
+<script src="./js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	/*$(window).scroll(function () {
+	    var scrollTop=$(window).scrollTop();
+        //浏览器当前窗口可视区域高度
+        var windowHeight=$(window).height();
+        //浏览器当前窗口文档的高度
+        var documentHeight=$(document).height();
+        if (documentHeight-windowHeight-scrollTop<200) {
+            console.log(222);
+        }
+	})
+    window.onscroll = function() {
+        var scrollT = document.documentElement.scrollTop || document.body.scrollTop;
+        //居上滚动了多少高度
+        var scrollH = document.documentElement.scrollHeight || document.body.scrollHeight;
+        //页面总高度
+        var clientH = document.documentElement.clientHeight || document.body.clientHeight;
+        //页面可视区域的高度
+        
+        if (scrollH-clientH-scrollT<200) {
+            console.log("到底部了");
+        } else if (scrollT==0) {
+            console.log("到顶部了");
+        }
+    }*/
+    function scrollMonitor(height,callback) {
+        window.onscroll = function() {
+            var scrollT = document.documentElement.scrollTop || document.body.scrollTop;
+            //居上滚动了多少高度
+            var scrollH = document.documentElement.scrollHeight || document.body.scrollHeight;
+            //页面总高度
+            var clientH = document.documentElement.clientHeight || document.body.clientHeight;
+            //页面可视区域的高度
+            if (scrollH-clientH-scrollT<height) {
+                callback&&callback();
+            }
+        }
+    }
+    scrollMonitor(200,function () {
+        console.log(222);
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="box">
+    <span class="child_0">22222</span>
+    ddddddd
+    <em class="child_1">333333</em>
+    444444
+</div>
+<script type="text/javascript">
+    var box=document.getElementById("box");
+    var children=box.childNodes;
+    console.log(children[1]);
+</script>
+<script src="./js/jquery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+    console.log($('#box').children().length);
+</script>
+</body>
+</html>

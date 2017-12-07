@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=8">
+<title>2017年中国游戏十强</title>
+<link rel="Shortcut Icon" href="./favicon.png">
+<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="./css/main.css">
+	<style type="text/css">
+	    body{
+			background: #000;
+		}
+		.top-10-container .top-10-content .top-10 {
+			overflow: inherit;
+		}
+		.top-10-container .top-10-content .top-10 .top-10-item {
+			box-sizing: inherit;
+		}
+	</style>
+</head>
+
+<body>
+<div class="container">
+	<div class="top-10-container">
+		<h3>2017年度中国“游戏十强”申报名单</h3>
+		<div class="clearfix top-10-content grid">
+			<ul class="clearfix top-10" id="declaration-list" data-bind="foreach:allRankListModel.list">
+				<li class="top-10-item rank-item grid-item">
+					<h4 data-bind="text:awardName,attr:{title:awardName}"></h4>
+					<ul class="items" data-bind="foreach:items">
+						<!--<li data-bind="visible: $index()<10">-->
+						<li>
+							<span data-bind="text:$data,attr:{title:$data}"></span>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<script src="./js/knockout-3.4.0.js"></script>
+<script src="./js/jquery-2.1.4.min.js"></script>
+<script src="./js/service.js"></script>
+<script src="./js/masonry.pkgd.min.js"></script>
+<script src="./js/imagesloaded.pkgd.min.js"></script>
+<script>
+$(function(){
+	getAllRankList("declaration-list",refreshRankList);
+	function refreshRankList(){
+		var $grid = $('#declaration-list');
+		$grid.imagesLoaded( function(){
+			$grid.masonry({
+				itemSelector : '.grid-item',
+				gutter : 27,
+				isAnimated: true,
+				originTop: true
+			});
+		});
+	}
+});
+</script>
+</body>
+</html>

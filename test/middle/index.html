@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        body{
+            margin: 0;
+        }
+        .form_container{
+            height: 100px;
+            width: 300px;
+            padding: 50px;
+            margin: 100px auto;
+            background: #CCCCCC;
+            text-align: center;
+        }
+        .popup{
+            height: 100%;
+            width: 100%;
+            background: rgba(0,0,0,0.2);
+            position: fixed;
+            left: 0;
+            top: 0;
+            display: none;
+        }
+        .popup_text{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            height: 300px;
+            width: 400px;
+            background: #000;
+            font-size: 20px;
+            line-height: 300px;
+            text-align: center;
+            color: #fff;
+        }
+        .popup_close{
+            height: 30px;
+            width: 30px;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            transform: rotateZ(45deg);
+            cursor: pointer;
+        }
+        .popup_close:hover{
+            animation: closeMove 1.2s linear infinite;
+        }
+        @keyframes closeMove{
+            0%{
+                transform: rotate(45deg);
+            }
+            100%{
+                transform: rotate(405deg);
+            }
+        }
+        .popup_close span{
+            position: absolute;
+            left: 0px;
+            top: 50%;
+            height: 0px;
+            width: 30px;
+            border-bottom: 4px solid #fff;
+            margin-top: -2px;
+        }
+        .popup_close i{
+            position: absolute;
+            top: 0px;
+            left: 50%;
+            width: 0px;
+            height: 30px;
+            border-left: 4px solid #fff;
+            margin-left: -2px;
+        }
+    </style>
+</head>
+<body>
+<form action="" method="get" class="formForEmail">
+    <div class="form_container">
+        <input type="text" name="" placeholder="请输入邮箱" class="mail"/>
+        <div class="prompt">
+            请输入邮箱!
+        </div>
+        <input type="submit" value="提交" class="submitButton"/>
+    </div>
+</form>
+<div class="popup">
+    <div class="popup_text">
+        <div class="popup_close">
+            <span></span>
+            <i></i>
+        </div>
+        请输入正确邮箱!
+    </div>
+</div>
+<script type="text/javascript">
+    var formForEmail=document.querySelector('.formForEmail');
+    var mail=document.querySelector('.mail');
+    var prompt=document.querySelector('.prompt');
+    var submitButton=document.querySelector('.submitButton');
+    var popup=document.querySelector('.popup');
+    var popup_close=document.querySelector('.popup_close');
+    popup.style.height=window.innerHeight+'px';
+    popup.style.width=window.innerWidth+'px';
+    submitButton.onclick=function (ev){
+        var textValue=mail.value;
+        if (checkMail(textValue)) {
+            formForEmail.submit();
+            prompt.style.color='';
+            prompt.innerHTML='请输入邮箱!';
+        } else{
+            popup.style.display='block'
+            prompt.style.color='red';
+            prompt.innerHTML='请输入正确邮箱!';
+            ev.preventDefault();
+        }
+    }
+    popup_close.onclick=function (){
+        popup.style.display='none'
+    }
+    function checkMail(mailNum){
+        if(!(/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/.test(mailNum))){
+            return false;
+        }else{
+            return true;
+        }
+    }
+</script>
+</body>
+</html>

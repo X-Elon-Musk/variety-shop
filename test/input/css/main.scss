@@ -1,0 +1,105 @@
+/* Sass Document */
+body{
+	color:#6a7989;
+	background-color:#d0d6d6;
+}
+a,a:hover{
+	color:#6a7989;
+	text-decoration:none;
+}
+h1{
+	font-size:1.8rem;
+}
+.container{
+	width:100%;
+	margin:0 auto;
+	background-color:#fff;
+	padding:2rem;
+}
+.q-choice-piccheck{
+	clear:both;
+	min-height:38px;
+	margin:30px 0;
+	.first_column{
+		width:100%;
+	}
+}
+@media screen and (min-width: 800px) {
+	h1{
+		font-size:2rem;
+	}
+         .container{
+			width:80%;
+			margin:0 auto;
+			background-color:#fff;
+			padding:50px;
+		}
+		input[type="text"],select{width:220px;}
+		.q-choice-piccheck{
+			clear:both;
+			min-height:38px;
+			margin:10px 0;
+			.first_column{
+				width:40%;
+			}
+		}
+  }
+
+.width-220{
+	width:220px;
+	background-color:white;
+	line-height:34px;
+	padding-top:4px;
+	padding-left:4px;
+}
+select{
+	width:220px;
+}
+.btn-200{
+	width:200px;
+	font-size:1.8rem;
+}
+.margin-left-500{
+	margin-left:500px;
+}
+.transparent{
+	opacity:0;
+}
+.star{
+	padding:0 4px;
+	color:red;
+}
+label{
+	display:inline;
+	font-weight:normal;
+}
+ul{
+	list-style:none;
+	padding:0;
+	margin:0;
+}
+li{
+	margin:8px 0;
+}
+input[type="text"],select{color: #333; width:320px;height:32px; box-sizing: border-box; letter-spacing: 1px;border: 1px solid #ccc;}
+.focus-border-con{
+	position:relative;
+	
+	input,textarea{border: 1px solid #ccc; padding: 7px 14px 9px; transition: 0.4s;outline:0; box-shadow:none; border-radius:0;}
+	input ~ .focus-border:before,
+	input ~ .focus-border:after{content: ""; position: absolute; top: 0; left: 0; width: 0; height: 2px; background-color: #5bc0de; transition: 0.3s;}
+	input ~ .focus-border:after{top: auto; bottom: 0; left: auto; right: 0;}
+	input ~ .focus-border i:before,
+	input ~ .focus-border i:after{content: ""; position: absolute; top: 0; left: 0; width: 2px; height: 0; background-color: #5bc0de; transition: 0.4s;}
+	input ~ .focus-border i:after{left: auto; right: 0; top: auto; bottom: 0;}
+	input:focus ~ .focus-border:before,
+	input:focus ~ .focus-border:after{width: 100%; transition: 0.3s;outline:0; box-shadow:none; border-radius:0;}
+	input:focus ~ .focus-border i:before,
+	input:focus ~ .focus-border i:after{height: 100%; transition: 0.4s;outline:0; box-shadow:none; border-radius:0;}
+}
+.input-textarea{
+	width:500px;
+	height:120px;
+	word-break:break-all;
+}
+

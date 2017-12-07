@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="./css/search.css" rel="stylesheet" />
+</head>
+<body>
+<div class="searchModule">
+    <input type="text" name="name" value="" placeholder="输入查找内容" class="search" id="search" />
+    <ul class="items">
+    </ul>
+</div>
+<script src="./js/jquery-1.8.3.min.js"></script>
+<script src="./js/searchAjax.js"></script>
+<script>
+    /*var onOff = true,
+            index = -1;
+    $(".search").keyup(function (ev) {
+        ev = ev || event;
+        if (ev.keyCode !== 38 && ev.keyCode !== 40 && ev.keyCode !== 13) {
+            index = -1;
+
+            $(".items").css({
+                display: "block"
+            })
+
+            /!*var xhr = new XMLHttpRequest();
+
+            xhr.open('get','./js/data.js',true);
+
+            xhr.onload = function(){
+                var data = xhr.responseText;
+
+                /!*var str = '';
+
+                for(var i=0;i<data.length;i++){
+                    str += '<li><a href="'+data[i].src+'">'+data[i].title+'</a><span>'+data[i].date+'</span></li>';
+                }*!/
+                $(".items").html(data);
+            };
+            xhr.send();*!/
+
+
+            $.ajax({
+             type: "POST",
+             url: './js/data.js',
+             success: function(data){
+                 alert( data );
+                 }
+             });
+        }
+    }).blur(function () {
+        /!*if (onOff) {
+         $(".items").css({
+         display: "none"
+         })
+         }*!/
+    });*/
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<!--<ul data-deadline="2017/07/13 00:00:00">-->
+<!--<ul data-deadline="2017.07.13 12:12:12">-->
+<ul data-deadline="2017-07-11 15:14:10">
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+<script src="./count-down-1.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	var list=document.querySelectorAll("ul li");
+    var deadline=document.querySelector("ul").dataset.deadline;
+    CountDown(deadline,list,function () {
+        alert('倒计时结束！');
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>Jumbotron Template for Bootstrap</title>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+        ul,li{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .select-container{
+            margin: 20px auto;
+            width: 200px;
+            height: 34px;
+            position: relative;.
+        }
+        .options{
+            margin-right: 0;
+            margin-left: 0;
+            background-color: #fff;
+            border-color: #ddd;
+            border-width: 1px;
+            border-radius: 4px 4px 0 0;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            padding: 15px 0 15px 0px;
+            text-indent: 1em;
+            border: 1px solid #e1e1e8;
+        }
+        .options li{
+            cursor: pointer;
+        }
+        .options li:hover{
+            cursor: pointer;
+            background: #5bc0de;
+        }
+        .caret-container{
+            text-shadow: 0 1px 0 #fff;
+            background-image: -webkit-linear-gradient(top,#fff 0,#e0e0e0 100%);
+            background-image: -o-linear-gradient(top,#fff 0,#e0e0e0 100%);
+            background-image: -webkit-gradient(linear,left top,left bottom,from(#fff),to(#e0e0e0));
+            background-image: linear-gradient(to bottom,#fff 0,#e0e0e0 100%);
+            position: absolute;
+            right: 0px;
+            top: 0px;
+        }
+        .options{
+            height: auto;
+            width: 100%;
+            position: absolute;
+            left: 0px;
+            top: 34px;
+            z-index: 2000;
+            display: none;
+        }
+        .button-submit{
+            display: block;
+            margin: 100px auto;
+        }
+    </style>
+</head>
+
+<body>
+<form>
+    <div class="select-container">
+        <input type="text" class="form-control input-text" placeholder="Text input">
+        <span class="caret-container btn btn-default">
+            <span class="caret"></span>
+        </span>
+        <ul class="options">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+    </div>
+    <button type="button" class="btn btn-default button-submit">Submit</button>
+</form>
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $(document).click(function () {
+            $('.options').hide();
+        })
+        $('.caret-container').click(function (e) {
+            stopPropagation(e);
+            if ($('.options')) {
+                $('.options').show();
+                $('.options li').click(function () {
+                    $('.input-text').val($(this).html());
+                    $('.options').hide();
+                });
+            }
+        })
+        $('.input-text').focusin(function (e) {
+            stopPropagation(e);
+            $('.options').hide();
+        })
+        $('.button-submit').click(function (e) {
+            stopPropagation(e);
+            $('form').submit();
+        })
+        function stopPropagation(e) {
+            if (e.stopPropagation)
+                e.stopPropagation();
+            else
+                e.cancelBubble = true;
+        }
+    })
+</script>
+</body>
+</html>

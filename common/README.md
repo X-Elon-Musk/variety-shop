@@ -125,6 +125,11 @@ input::-webkit-input-placeholder{
 		background-image:url('./image/1.jpg');
 	}
 }
+/* 改变输入框的光标颜色和内容文字颜色 */
+input, textarea, [contenteditable] { 
+    color: #34495e; 
+    caret-color: #42b983; 
+}
 ```
 
 # js:

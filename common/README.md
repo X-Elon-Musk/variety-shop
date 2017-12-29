@@ -130,6 +130,9 @@ input, textarea, [contenteditable] {
     color: #34495e; 
     caret-color: #42b983; 
 }
+.bg{
+  background: #fff url(./0.png) repeat fixed top center;
+}
 ```
 
 # js:

@@ -309,21 +309,22 @@ d\GitHub.com\coding\mongo
 - 模块输出的区别：
 
 1。属性
-   ```
-   module.exports=new Date();
-   调用：
-   var date = require('./module/date.js');
+```
+module.exports=new Date();
+调用：
+var date = require('./module/date.js');
 
-   ```
+```
 2。行为方法（函数）
-  ```
-  module.exports=()=>{
-    return new Date();
-  }
-  调用：
-  var date = require('./module/date.js')();
+```
+module.exports=()=>{
+return new Date();
+}
+调用：
+var date = require('./module/date.js')();
 
-  ```
+```
+
 属性输出会有缓存，不会重新调用。函数输出调用时会重新执行，不会有缓存。
 ***
 #### 2017-08-30:
@@ -365,6 +366,43 @@ contains选择符是指对象中包括指定内容的对象本身，如:$('td:co
 >HTML <td> 标签的 rowspan 属性
 
 rowspan 属性规定单元格可横跨的行数。
+***
+#### 2018-01-24:
+
+- Linux下在线升级nodejs：
+1. 清除缓存
+```
+npm cache clean -f
+```
+2. 安装n模块
+```
+npm install -g n
+```
+3. 升级node.js到最新稳定版
+```
+n stable
+```
+4. 升级到最新版
+```
+n latest
+```
+5. 升级到制定版本
+```
+n v7.10.0
+```
+
+- registry
+>npm update命令怎么知道每个模块的最新版本呢？
+答案是 npm 模块仓库提供了一个查询服务，叫做 registry 。以 npmjs.org 为例，它的查询服务网址是 https://registry.npmjs.org/ 。
+这个网址后面跟上模块名，就会得到一个 JSON 对象，里面是该模块所有版本的信息。比如，访问 https://registry.npmjs.org/react，就会看到 react 模块所有版本的信息。
+registry 网址的模块名后面，还可以跟上版本号或者标签，用来查询某个具体版本的信息。比如， 访问 https://registry.npmjs.org/react/v0.14.6 ，就可以看到 React 的 0.14.6 版。
+返回的 JSON 对象里面，有一个dist.tarball属性，是该版本压缩包的网址。
+dist: {
+  shasum: '2a57c2cf8747b483759ad8de0fa47fb0c5cf5c6a',
+  tarball: 'http://registry.npmjs.org/react/-/react-0.14.6.tgz' 
+},
+到这个网址下载压缩包，在本地解压，就得到了模块的源码。npm install和npm update命令，都是通过这种方式安装模块的。
+
 ***
 
 

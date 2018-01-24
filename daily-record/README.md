@@ -390,6 +390,10 @@ n latest
 ```
 n v7.10.0
 ```
+6. 卸载固定版本
+```
+n - 7.10.0
+```
 
 - registry
 >npm update命令怎么知道每个模块的最新版本呢？
@@ -403,6 +407,22 @@ dist: {
 },
 到这个网址下载压缩包，在本地解压，就得到了模块的源码。npm install和npm update命令，都是通过这种方式安装模块的。
 
+- git pull报错
+```
+error: Your local changes to the following files would be overwritten by merge: 
+```
+1.如果你想保留刚才本地修改的代码，并把git服务器上的代码pull到本地（本地刚才修改的代码将会被暂时封存起来）
+```
+git stash  
+git pull origin master  
+git stash pop 
+```
+2.如果你想完全地覆盖本地的代码，只保留服务器端代码，则直接回退到上一个版本，再进行pull
+```
+git reset --hard  
+git pull origin master  
+```
+ 
 ***
 
 

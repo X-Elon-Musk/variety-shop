@@ -424,6 +424,55 @@ git pull origin master
 ```
  
 ***
+#### 2018-01-27:
+
+- `vue`项目上传到`nginx`服务器上，公网访问：
+1. 项目完成后`npm run build`，生成dist目录。
+> 本项目线上访问地址为 http://792884274.com/vue-fuse/ ,所以在router/index.js中设置：
+```
+export default new Router({
+  mode: 'history',
+  base: '/vue-fuse/',
+  routes: [
+    ...
+  ]
+})
+```
+2. github托管项目。
+3. Xshell命令行中，中将项目clone到服务器上指定文件夹中。
+```
+[root@izhp37e37j73ghn6yfwf7qz app]# git clone https://github.com/792884274/vue-fuse.git
+```
+> 同样可以用压缩项目，上传压缩文件(rz -bey 压缩文件)，解压项目压缩文件(unzip 压缩文件)的方式上传到服务器。
+4. 在nginx的html文件夹下创建项目软链接
+```
+[root@izhp37e37j73ghn6yfwf7qz ~]# cd /usr/local/nginx/html
+[root@izhp37e37j73ghn6yfwf7qz html]# ln -s ~/app/vue-fuse/dist /usr/local/nginx/html/vue-fuse
+```
+5. nginx.conf配置
+```
+http{
+  server {
+       listen 80;
+       server_name 792884274.com www.792884274.com;
+       access_log  logs/792884274.log;
+       location /vue-fuse/ {
+          root  html;
+          index  index.html index.htm;
+       }
+  }
+}
+```
+6. 重启服务
+```
+[root@izhp37e37j73ghn6yfwf7qz conf]# cd ../sbin
+[root@izhp37e37j73ghn6yfwf7qz sbin]# ./nginx -t
+nginx: the configuration file /usr/local/nginx/conf/nginx.conf syntax is ok
+nginx: configuration file /usr/local/nginx/conf/nginx.conf test is successful
+[root@izhp37e37j73ghn6yfwf7qz sbin]# ./nginx -s reload
+```
+7. 线上访问 http://792884274.com/vue-fuse/ 。
+***
 
 
 

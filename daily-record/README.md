@@ -449,6 +449,7 @@ export default new Router({
 [root@izhp37e37j73ghn6yfwf7qz ~]# cd /usr/local/nginx/html
 [root@izhp37e37j73ghn6yfwf7qz html]# ln -s ~/app/vue-fuse/dist /usr/local/nginx/html/vue-fuse
 ```
+> 同样可以将项目直接放到nginx的html文件夹下，如此就如需在创建软链接。
 5. nginx.conf配置
 ```
 http{
@@ -472,6 +473,7 @@ nginx: configuration file /usr/local/nginx/conf/nginx.conf test is successful
 [root@izhp37e37j73ghn6yfwf7qz sbin]# ./nginx -s reload
 ```
 7. 线上访问 http://792884274.com/vue-fuse/ 。
+
 ***
 
 

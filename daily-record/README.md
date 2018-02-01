@@ -475,6 +475,15 @@ nginx: configuration file /usr/local/nginx/conf/nginx.conf test is successful
 7. 线上访问 http://792884274.com/vue-fuse/ 。
 
 ***
+#### 2018-02-01:
+
+- 发送邮件：
+```
+<a href="mailto:ima@imanet.org">发送邮件</a>
+```
+
+***
+
 
 
 

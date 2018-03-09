@@ -83,6 +83,10 @@ justify-content: space-between;
 # css:
 
 ```
+设置body高度铺满整个屏幕
+html, body {
+    height: 100%;
+}
 .clearfix:after {
   content: " ";
   display: block;

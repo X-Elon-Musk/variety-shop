@@ -483,6 +483,45 @@ nginx: configuration file /usr/local/nginx/conf/nginx.conf test is successful
 ```
 
 ***
+#### 2018-04-03:
+
+- 项目上传到阿里云服务器，并通过nginx访问：
+1.连接阿里云服务器，找到nginx目录
+```
+whereis nginx
+cd /usr/local/nginx
+```
+2.上传文件。(如果是项目文件的，上传项目压缩文件)
+```
+cd html
+mkdir test_dir(新建文件夹)
+rz -bey(上传文件)
+```
+3.修改配置文件
+```
+cd conf
+vim nginx.conf
+[
+  步骤：1.点击'i'进行编辑
+        2.编辑
+        3.'esc'键退出
+        4.(:q!)退出编辑文件状态，不存盘强制退出
+          (:wq)退出编辑文件状态，存盘并退出
+]
+```
+![首屏展示](./images/0403/0.png)
+4.重启nginx服务
+```
+cd sbin/
+./nginx -t
+./nginx -s reload
+```
+5.线上访问
+```
+浏览器中输入网址：
+http://39.104.65.227/test_dir/main.pptx
+```
+***
 
 
 

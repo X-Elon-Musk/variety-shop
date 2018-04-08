@@ -519,7 +519,7 @@ cd sbin/
 5.线上访问
 ```
 浏览器中输入网址：
-http://39.104.65.227/test_dir/main.pptx
+http://39.104.65.227/test_dir/main.pptx(浏览器无法直接浏览ppt，可以浏览html文件)
 ```
 ***
 

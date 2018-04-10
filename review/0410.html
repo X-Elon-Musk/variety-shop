@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body{
+            background: grey;
+        }
+		/*设备显示区域的选择。使用在移动端设备时*/
+		@media only screen and (max-device-width:768px){
+            body{
+                background: red;
+            }
+        }
+		/*屏幕宽度，即为浏览器窗口宽度*/
+        @media only screen and (max-width:807px){
+			body{
+				background: green;
+			}
+        }
+	</style>
+</head>
+<body>
+	<script type="text/javascript">
+		/*依次打印出0-4 */
+		//错误写法
+		for (var i=0;i<5;i++) {
+			setTimeout((function(i){
+				console.log(i);
+			})(i),i*1000)
+		}
+		//正确写法
+		for (var i=0;i<5;i++) {
+			setTimeout((function(i){
+				console.log(i);
+			}).bind(this,i),i*1000)
+		}
+		
+		/*写一个less循环*/
+		/*.test(@count)when(@count>0){
+			h@{count}{
+				height: (10px*@count);
+			}
+			.test((@count-1));
+		}
+		.test(5)*/
+	</script>
+		
+</body>
+</html>

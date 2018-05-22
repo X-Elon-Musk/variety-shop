@@ -88,13 +88,13 @@ html, body {
     height: 100%;
 }
 .clearfix:after {
-  content: " ";
-  display: block;
-  clear: both;
-  height: 0;
+    content: " ";
+    display: block;
+    clear: both;
+    height: 0;
 }
 .clearfix {
-  zoom: 1;
+    zoom: 1;
 }
 .ellips {
     word-break: break-all;
@@ -102,6 +102,7 @@ html, body {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+- 改变input输入框的placeholder字体颜色
 input::-webkit-input-placeholder{
     color: rgba(106, 121, 137, 0.6)!important;
 }
@@ -114,7 +115,23 @@ input::-webkit-input-placeholder{
 　　input:-ms-input-placeholder{
     color: rgba(106, 121, 137, 0.6)!important;
 }
-/* portrait 竖屏*/
+
+- 移除 input type="number" 时浏览器自带的上下箭头
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+input[type="number"]{
+    -moz-appearance: textfield;
+}
+
+- 改变输入框的光标颜色和内容文字颜色
+input, textarea, [contenteditable] { 
+    color: #34495e; 
+    caret-color: #42b983; 
+}
+
+- portrait 竖屏
 @media screen and (orientation:portrait) {
 	/* portrait-specific styles */
 	body{
@@ -122,21 +139,17 @@ input::-webkit-input-placeholder{
 
 	}
 }
-/* landscape 横屏*/
+- landscape 横屏
 @media screen and (orientation:landscape) {
 	/* landscape-specific styles */
 	body{
 		background-image:url('./image/1.jpg');
 	}
 }
-/* 改变输入框的光标颜色和内容文字颜色 */
-input, textarea, [contenteditable] { 
-    color: #34495e; 
-    caret-color: #42b983; 
-}
 .bg{
   background: #fff url(./0.png) repeat fixed top center;
 }
+
 ```
 
 # js:

@@ -96,11 +96,18 @@ html, body {
 .clearfix {
     zoom: 1;
 }
+- 不换行
 .ellips {
     word-break: break-all;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+- 自动换行
+.breakword{
+    white-space:normal;
+    word-wrap:break-word; 
+    word-break:break-all;
 }
 - 改变input输入框的placeholder字体颜色
 input::-webkit-input-placeholder{

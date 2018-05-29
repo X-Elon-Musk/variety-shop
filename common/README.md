@@ -122,6 +122,8 @@ input::-webkit-input-placeholder{
 　　input:-ms-input-placeholder{
     color: rgba(106, 121, 137, 0.6)!important;
 }
+- 动态计算长度值，calc()函数支持 "+", "-", "*", "/" 运算；
+height: calc(100% - 250px);
 
 - 移除 input type="number" 时浏览器自带的上下箭头
 input::-webkit-outer-spin-button,

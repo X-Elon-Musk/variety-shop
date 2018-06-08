@@ -109,6 +109,14 @@ html, body {
     word-wrap:break-word; 
     word-break:break-all;
 }
+- 两行，超过的话。。。
+.line-clamp{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
 - 改变input输入框的placeholder字体颜色
 input::-webkit-input-placeholder{
     color: rgba(106, 121, 137, 0.6)!important;

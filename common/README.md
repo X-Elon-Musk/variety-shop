@@ -117,6 +117,11 @@ html, body {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
+- 固定宽度内让文字均匀分布
+.justify{
+  text-align:justify;
+  text-align-last:justify;
+}
 - 改变input输入框的placeholder字体颜色
 input::-webkit-input-placeholder{
     color: rgba(106, 121, 137, 0.6)!important;

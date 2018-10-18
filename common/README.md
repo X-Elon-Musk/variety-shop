@@ -171,6 +171,15 @@ input, textarea, [contenteditable] {
 .bg{
   background: #fff url(./0.png) repeat fixed top center;
 }
+- 控制页面文字不能被选中
+body{
+  -moz-user-select:none;/*火狐*/
+  -webkit-user-select:none;/*webkit浏览器*/
+  -ms-user-select:none;/*IE10*/
+  -khtml-user-select:none;/*早期浏览器*/
+  user-select:none;
+}
+
 
 ```
 

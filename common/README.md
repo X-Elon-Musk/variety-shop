@@ -96,6 +96,12 @@ html, body {
 .clearfix {
     zoom: 1;
 }
+.f_l {
+  float: left;
+}
+.f_r {
+  float: right;
+}
 - 不换行
 .ellips {
     word-break: break-all;

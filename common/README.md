@@ -46,7 +46,7 @@
   border: @border;
   border-radius: @radius;
 }
-.flexCenter(){
+.flexCenter{
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -60,7 +60,7 @@
   -ms-flex-align: center;
   align-items: center;
 }
-.flexX(){
+.flexX{
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;

@@ -102,6 +102,9 @@ html, body {
 .f_r {
   float: right;
 }
+.undis {
+  display: none;
+}
 - 不换行
 .ellips {
     word-break: break-all;

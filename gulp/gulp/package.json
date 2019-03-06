@@ -1,0 +1,17 @@
+{
+  "name": "gulp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sourcemaps": "^2.6.4"
+  },
+  "dependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp-less": "^4.0.1",
+    "gulp-ruby-sass": "^3.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sass-china": "^3.1.0"
+  }
+}

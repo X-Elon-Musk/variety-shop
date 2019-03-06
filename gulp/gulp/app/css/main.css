@@ -1,0 +1,14 @@
+div div {
+  color: yellow;
+  font-weight: bold;
+}
+div span {
+  color: yellow;
+  font-weight: bold;
+}
+div p {
+  color: red;
+  font-weight: bold;
+  line-height: 30px;
+  font-size: 50px;
+}

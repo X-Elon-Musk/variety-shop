@@ -105,6 +105,18 @@ html, body {
 .undis {
   display: none;
 }
+
+-灰度滤镜处理
+.grayset{
+	filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
+    -webkit-filter: grayscale(1);
+}
+
 - 不换行
 .ellips {
     word-break: break-all;
